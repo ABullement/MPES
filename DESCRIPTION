@@ -1,0 +1,20 @@
+Package: MPES
+Type: Package
+Title: Multi-parameter evidence synthesis in R
+Version: 0.0.1
+Authors@R: person("Ash", "Bullement", email = "abullement@deltahat.com",
+                  role = c("aut", "cre"))
+Description: Multi-parameter evidence synthesis (MPES) approach by Guyot et al., (2017) in R (via rstan)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/ABullement/MPES
+Imports:
+    flexsurv,
+    tidyr,
+    rstan,
+    dplyr,
+    survminer,
+    openxlsx
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
