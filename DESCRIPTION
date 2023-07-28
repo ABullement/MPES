@@ -37,3 +37,11 @@ the general population numerator at 34 years was 23,080, and the denominator 30,
 see Appendix B of the Guyot paper for all of the raw data
 For a two-arm model, user can impose assumption on HR from a specific time point, base-case in Guyot had HR of 1 with SD of 0.1 'kick in' at 6 years until 28 years
 hr = 1, sd = 0.1, start = 6, end = 28.
+
+knot locations
+k <- c(0, 3.39, 5.23, 6.58) #exact values reported by Guyot et al.
+# 3.39 was placed in the middle of the RCT period (log(30 months)), roughly: log(median(trial.dat$t))
+# 5.23 was placed half way through the external data period on the log scale (log(187 months)), roughly: log(median(ext.dat$t_n))
+# 6.58 was placed at the time of the last assumed death in the general population data, 60 years, roughly: log(60*12)
+
+  # there are two lambda values because there are two internal knots - see Appendix C of the Guyot paper for the formula
