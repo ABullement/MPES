@@ -18,3 +18,22 @@ Imports:
     openxlsx
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
+
+
+
+
+
+Notes on the code
+single_arm_mode #TRUE or FALSE #Choose whether to run for a single-arm or not (i.e., exclude the HR aspect, and only produce estimates for the intervention arm)
+gen_pop_adjust #TRUE or FALSE #Choose whether or not to include the general population adjustment aspect of the MPES method
+hr_adjust #TRUE or FALSE #Choose whether or not to include the HR adjustment aspect of the MPES method
+max_surv #Time point which represents the absolute maximum survival for the population (years from baseline)
+plot_lim_x #limit for x axis in years
+plot_breaks_x #breaks for x axis in years
+iter_spec #Iterations for Stan. Note: may be worth changing to 5,000 to ensure this is stable
+
+For the analyses including both SEER and general population conditional survival information,
+the general population numerator at 34 years was 23,080, and the denominator 30,196; representing an estimated 76.4% 1-year conditional survival
+see Appendix B of the Guyot paper for all of the raw data
+For a two-arm model, user can impose assumption on HR from a specific time point, base-case in Guyot had HR of 1 with SD of 0.1 'kick in' at 6 years until 28 years
+hr = 1, sd = 0.1, start = 6, end = 28.
