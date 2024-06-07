@@ -8,7 +8,7 @@ pacman::p_load(flexsurv, tidyr, rstan, dplyr, survminer, openxlsx,
                survHE, INLA, pracma)
 
 # Set working directory and seed ----
-setwd("G:/My Drive/PhD/3. PhD work/2023_All methods in R/All methods")
+setwd("...")
 set.seed(99999)
 
 # General settings = ----
